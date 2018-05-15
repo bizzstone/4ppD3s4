@@ -2,7 +2,7 @@
 <sharpUpdate> 
     <update appID="TestApp"> 
         <version>28.0.0.0</version> 
-        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/key.exe</url> 
+        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/TestApp.exe</url> 
         <fileName>TestApp.exe</fileName> 
         <md5>3a6708b0ef094d502f483d06e581a262</md5>
         <description>Update: 06/19/2014:
