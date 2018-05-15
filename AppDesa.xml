@@ -1,0 +1,14 @@
+<?xml version="1.0"?> 
+<sharpUpdate> 
+    <update appID="AppDesa"> 
+        <version>28.0.0.0</version> 
+        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/AppDesa.exe</url> 
+        <fileName>AppDesa.exe</fileName> 
+        <md5>2be858f81f9a1d41918186e4e5a4096c</md5>
+        <description>Update: 16/05/2018:
+        1. Added notification message when the current version is already the latest
+         1. Added notification message when the current version is already the latest.
+          1. Added notification message when the current version is already the latest..</description> 
+        <launchArgs></launchArgs> 
+    </update> 
+</sharpUpdate>
