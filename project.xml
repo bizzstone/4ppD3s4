@@ -1,0 +1,14 @@
+<?xml version="1.0"?> 
+<sharpUpdate> 
+    <update appID="TestApp"> 
+        <version>5.0.0.0</version> 
+        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/TestApp.exe</url> 
+        <fileName>TestApp.exe</fileName> 
+        <md5>4bcf48428fed20bd601cad41c80a8aac</md5>
+        <description>Update: 06/19/2014:
+        1. Added notification message when the current version is already the latest
+         1. Added notification message when the current version is already the latest.
+          1. Added notification message when the current version is already the latest..</description> 
+        <launchArgs></launchArgs> 
+    </update> 
+</sharpUpdate>
