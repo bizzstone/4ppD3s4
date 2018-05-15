@@ -2,8 +2,8 @@
 <sharpUpdate> 
     <update appID="TestApp"> 
         <version>28.0.0.0</version> 
-        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/key.exe</url> 
-        <fileName>key.exe</fileName> 
+        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/TestApp.exe</url> 
+        <fileName>TestApp.exe</fileName> 
         <md5>75c506c6c74f94f8bb67dc1221da1911</md5>
         <description>Update: 06/19/2014:
         1. Added notification message when the current version is already the latest
