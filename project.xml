@@ -1,7 +1,7 @@
 <?xml version="1.0"?> 
 <sharpUpdate> 
     <update appID="TestApp"> 
-        <version>2.0.0.0</version> 
+        <version>28.0.0.0</version> 
         <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/key.exe</url> 
         <fileName>TestApp.exe</fileName> 
         <md5>3a6708b0ef094d502f483d06e581a262</md5>
