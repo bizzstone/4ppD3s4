@@ -2,9 +2,9 @@
 <sharpUpdate> 
     <update appID="AppDesa"> 
         <version>2.0.1.0</version> 
-        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/AppDesa.exe</url> 
+        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/2.0.1.0/AppDesa.exe</url> 
         <fileName>AppDesa.exe</fileName> 
-        <md5>b2e311633c4a08b192007636ae5091d9</md5>
+        <md5>98c4a7fdcf3f3562af3f599bf721f0ef</md5>
         <description>Update: 16/05/2018:
         1. Penamambahan Meu PBB
             1. Data DHKP
