@@ -1,7 +1,7 @@
 <?xml version="1.0"?> 
 <sharpUpdate> 
     <update appID="AppDesa"> 
-        <version>2.2.1.0</version> 
+        <version>2.2.12.0</version> 
         <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/2.2.1.0/AppDesa.exe</url> 
         <fileName>AppDesa.exe</fileName> 
         <md5>122b85319ccefc73078f62797d57ba73</md5>
