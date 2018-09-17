@@ -1,14 +1,18 @@
 <?xml version="1.0"?> 
 <sharpUpdate> 
     <update appID="AppDesa"> 
-        <version>2.2.3.0</version> 
-        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/2.2.3.0/AppDesa.exe</url> 
+        <version>2.2.4.0</version> 
+        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/2.2.4.0/AppDesa.exe</url> 
         <fileName>AppDesa.exe</fileName> 
-        <md5>397567214f57925f2091b91e93cc93a7</md5>
-        <description>Update: 21/05/2018:
+        <md5>7a71b2149e4f49af630d87b4535a4d6d</md5>
+        <description>Update: 17/09/2018:
         Penambahan Fitur
-         1. Perbaikan Bug Formulir Akta Kelahiran.
-         2. Perbaikan Bug Entri Surat Pindah Datang
+         1. Auto Log Out.
+         2. Kostum Background,image,logo
+         3. Kostum Lokasi Penyimpanan File
+         4. Detect Aplikasi Running
+         5. Kostum KOP Surat
+         6. Fix Bug No Logo
         </description> 
         <launchArgs></launchArgs> 
     </update> 
