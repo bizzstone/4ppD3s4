@@ -1,10 +1,10 @@
 <?xml version="1.0"?> 
 <sharpUpdate> 
     <update appID="AppDesa"> 
-        <version>2.2.4.0</version> 
-        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/2.2.4.0/AppDesa.exe</url> 
+        <version>2.2.5.0</version> 
+        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/2.2.5.0/AppDesa.exe</url> 
         <fileName>AppDesa.exe</fileName> 
-        <md5>d7556062c959fb561bf99580c47b6c46</md5>
+        <md5>438f5ae6fc4e3796b1f40c739a07f544</md5>
         <description>Update: 17/09/2018:
         Penambahan Fitur
          1. Auto Log Out.
