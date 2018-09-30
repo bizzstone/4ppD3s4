@@ -2,7 +2,7 @@
 <version>2.0.0.0</version>
 <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/AutoUpdaterTest.zip</url>
 <changelog>
-https://rbsoft.org/updates/AutoUpdaterTest.xml
+https://github.com/ravibpatel/AutoUpdater.NET/blob/master/README.md
 </changelog>
 <mandatory>false</mandatory>
 </item>
