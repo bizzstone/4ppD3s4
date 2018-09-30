@@ -1,14 +1,8 @@
-<?xml version="1.0"?> 
-<sharpUpdate> 
-    <update appID="TestApp"> 
-        <version>2.0.0.0</version> 
-        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/TestApp.exe</url> 
-        <fileName>TestApp.exe</fileName> 
-        <md5>3a6708b0ef094d502f483d06e581a262</md5>
-        <description>Update: 06/19/2014:
-        1. Added notification message when the current version is already the latest
-         1. Added notification message when the current version is already the latest.
-          1. Added notification message when the current version is already the latest..</description> 
-        <launchArgs></launchArgs> 
-    </update> 
-</sharpUpdate>
+<item>
+<version>2.0.0.0</version>
+<url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/AutoUpdaterTest.zip</url>
+<changelog>
+http://localhost/dashboard/
+</changelog>
+<mandatory>false</mandatory>
+</item>
