@@ -20,9 +20,9 @@
     </update>
     <add> 
         <version>1.0.0.0</version> 
-        <url>https://raw.githubusercontent.com/henryxrl/SharpUpdate/master/TestApp/bin/Debug/SharpUpdate.dll</url> 
-        <filePath>./test_add/SharpUpdate_test_add.dll</filePath>
-        <md5>88237737FECE6C41EF6CD10AE4DC54C0</md5>
+        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/tes/DataRicik.exe</url> 
+        <filePath>./DataRicik.exe</filePath>
+        <md5>46730d65c558a767b5a0be1061e38cce</md5>
         <description>Add: 10/06/2018:
         1. Test add.</description> 
         <launchArgs></launchArgs> 
