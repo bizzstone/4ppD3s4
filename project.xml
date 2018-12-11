@@ -1,30 +1,10 @@
-<?xml version="1.0"?> 
-<sharpUpdate> 
-    <update> 
-        <version>3.0.0.0</version> 
-        <url>https://raw.githubusercontent.com/henryxrl/SharpUpdate/master/TestApp/bin/Debug/TestApp.exe</url> 
-        <filePath>./TestApp.exe</filePath>
-        <md5>F16F9270971EAEAE8E313B32E8FF0814</md5>
-        <description>Update: 10/06/2018:
-        1. Updated a label.</description> 
-        <launchArgs></launchArgs> 
-    </update>
-    <update> 
-        <version>1.0.0.0</version> 
-        <url>https://raw.githubusercontent.com/henryxrl/SharpUpdate/master/TestApp/bin/Debug/SharpUpdate.dll</url> 
-        <filePath>./SharpUpdate.dll</filePath>
-        <md5>88237737FECE6C41EF6CD10AE4DC54C0</md5>
-        <description>Update: 10/06/2018:
-        1. Support for multiple files updating.</description> 
-        <launchArgs></launchArgs> 
-    </update>
-    <add> 
-        <version>1.0.0.0</version> 
-        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/tes/DataRicik.exe</url> 
-        <filePath>./DataRicik.exe</filePath>
-        <md5>46730d65c558a767b5a0be1061e38cce</md5>
-        <description>Add: 10/06/2018:
-        1. Test add.</description> 
-        <launchArgs></launchArgs> 
-    </add>
-</sharpUpdate>
+<item>
+<version>2.0.0.0</version>
+<url>
+https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/update.zip
+</url>
+<changelog>
+https://raw.githubusercontent.com/ravibpatel/AutoUpdater.NET/master/README.md
+</changelog>
+<mandatory>false</mandatory>
+</item>
