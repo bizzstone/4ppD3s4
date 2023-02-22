@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body style="width: 400px">
+    <h1 id="changelog">Changelog</h1>
+
+<p>All notable changes to this project will be documented in this file.</p>
+
+<h2 id="unreleased">[Unreleased]</h2>
+
+<h3 id="added">Added</h3>
+
+<h3 id="changed">Changed</h3>
+
+<h3 id="removed">Removed</h3>
+
+<h2 id="0150">[0.15.0]</h2>
+
+<h3 id="changed-1">Changed</h3>
+
+<ul>
+<li><code>AppCastItem</code> is now marked serializable</li>
+
+<li>If using <code>SecurityMode.Unsafe</code>, files are <strong>always</strong> redownloaded because the library has no good way of knowing whether or not the file that is on disk is the file that is actually on the server (@rolikoff)</li>
+
+<li>Fixed a bug where if you cancel the download process or if an error occurs during download, the update file stays in the same directory (@rolikoff)</li>
+
+<li>Fixed a bug where the <code>DownloadCanceled</code> event was fired twice (@rolikoff)</li>
+</ul>
+
+<h2 id="0140sameas01401becausedeadpiklegoofed">[0.14.0] (Same as 0.14.0.1 because Deadpikle goofed)</h2>
+
+<h3 id="added-1">Added</h3>
+
+<ul>
+<li>NetSparkle now supports the <code>sparkle:os</code> attribute (#17). If this is not present, an update is assumed to be a Windows update. Valid types for Windows are "win" or "windows". The operating system string check is a case-insensitive check.
+
+
+<ul>
+<li>Added <code>OperatingSystemString</code> (default "windows") and <code>bool IsWindowsUpdate</code> to <code>AppCastItem</code></li>
+
+<li><code>AppCast.GetUpdates()</code> no longer returns non-Windows updates</li></ul>
+</li>
+
+<li>To increase compatibility with the main macOS Sparkle project, the <code>enclosure</code> tag can now be either <code>enclosure</code> or <code>sparkle:enclosure</code></li>
+
+<li>Added <code>AppCastItem.MIMEType</code> to read the <code>&lt;enclosure type=""&gt;</code> attribute if they want to (#15). Defaults to <code>application/octet-stream</code>.</li>
+
+<li>Added <code>UpdateDetectedEventArgs.AppCastItems</code> if you want to look at all available app cast items</li>
+
+<li>Added <code>DownloadPathForAppCastItem(AppCastItem item)</code> to easily grab the download path for a given downloadable appcast item</li>
+
+<li>Added <code>RunUpdate(AppCastItem item)</code> to allow you to run an update without waiting for the latest version to download. The DSA signature of the file is still checked!</li>
+</ul>
+
+<h3 id="changed-2">Changed</h3>
+
+<ul>
+<li><code>NetSparkle.UpdateSystemProfileInformation</code> is now private</li>
+
+<li><code>AppCast</code> no longer takes a Sparkle object and instead takes only those parameters that it needs to operate</li>
+
+<li><code>NextUpdateAction</code> is now in its own file in the <code>NetSparkle.Enums</code> namespace</li>
+</ul>
+
+<h3 id="removed-1">Removed</h3>
+
+<h2 id="013020171206">[0.13.0] - 2017-12-06</h2>
+
+<h3 id="added-2">Added</h3>
+
+<ul>
+<li><strong>BREAKING CHANGE</strong> Added <code>HideRemindMeLaterButton()</code> to <code>IUpdateAvailable</code></li>
+
+<li><strong>BREAKING CHANGE</strong> Added <code>HideSkipButton()</code> to <code>IUpdateAvailable</code></li>
+
+<li>Added <code>HideRemindMeLaterButton</code> to the <code>NetSparkle</code> class. Defaults to false. Set to true to make <code>NetSparkle</code> call <code>HideRemindMeLaterButton()</code> when showing the update window.</li>
+
+<li>Added <code>HideSkipButton</code> to the <code>NetSparkle</code> class. Defaults to false. Set to true to make <code>NetSparkle</code> call <code>HideSkipButton()</code> when showing the update window.</li>
+
+<li>Added <code>RemindMeLaterSelected</code> to the <code>NetSparkle</code> class. Defaults to null. Use this event to be notified when the user has clicked the <code>Remind Me Later</code> button in the update window. (@enscope)</li>
+</ul>
+
+<h3 id="changed-3">Changed</h3>
+
+<ul>
+<li>Release notes are now downloaded asynchronously, which should speed up the time it takes to show the download window</li>
+
+<li>Release note date is now Date.ToString("D") instead of "dd MMM yyyy" so that release notes show localized date strings</li>
+
+<li><strong>POTENTIALLY BREAKING CHANGE</strong> Fixed bug where <code>ValidationResult.Unchecked</code> was not returned properly from <code>OnDownloadFinished</code> if download file signature is null (@keithclanton)</li>
+
+<li><strong>BREAKING CHANGE</strong> <code>IUpdateAvailable</code> now has a <code>Result</code> of type <code>UpdateAvailableResult</code> rather than <code>DialogResult</code> in order to remove a dependency on WinForms. Use <code>DefaultUIFactory.ConvertDialogResultToUpdateAvailableResult</code> to convert from <code>DialogResult</code> to <code>UpdateAvailableResult</code> if needed. (@enscope) </li>
+</ul>
+
+<h3 id="removed-2">Removed</h3>
+
+<h2 id="012020170802">[0.12.0] - 2017-08-02</h2>
+
+<h3 id="added-3">Added</h3>
+
+<ul>
+<li>Added new <code>LogWriter</code> class for printing diagnostic messages to the console. You can now create your own child class that inherits from <code>LogWriter</code> to customize how information is logged to the console (or file, or wherever else you want diagnostic messages sent!)!</li>
+
+<li>Added .gitattributes file for line ending consistency for all developers (@stephenwade)</li>
+</ul>
+
+<h3 id="changed-4">Changed</h3>
+
+<ul>
+<li>Moved <code>UpdateStatus</code> enum to <code>NetSparkle.Enums</code></li>
+
+<li>Moved <code>UpdateInfo</code> class to its own file</li>
+
+<li>Fixed bug in <code>Configuration.cs</code> where a few values were not set properly in the constructor due to <code>InitWithDefaultValues</code> being called at the wrong time (@devstudiosoft)</li>
+
+<li><strong>BREAKING CHANGE</strong> Fixed bug in <code>AssemblyDiagnosticsAccessor</code> where <code>AssemblyProduct</code> returned the assembly version and not the assembly name (@devstudiosoft)</li>
+</ul>
+
+<h3 id="removed-3">Removed</h3>
+
+<ul>
+<li><strong>BREAKING CHANGE</strong> Removed <code>public void NetSparkle.ReportDiagnosticMessage</code> in lieu of new <code>LogWriter</code> class.</li>
+</ul>
+
+<h2 id="011020170716">[0.11.0] - 2017-07-16</h2>
+
+<h3 id="added-4">Added</h3>
+
+<ul>
+<li>Refactored logic to quit application to a separate <code>QuitApplication()</code> function</li>
+</ul>
+
+<h3 id="changed-5">Changed</h3>
+
+<ul>
+<li><code>RunDownloadedInstaller()</code> is now virtual and protected</li>
+
+<li>Renamed some files and variables</li>
+
+<li>Moved <code>SecurityMode</code> and <code>ValidationResult</code> enums to the <code>NetSparkle.Enums</code> namespace</li>
+</ul>
+
+<h2 id="010020170711">[0.10.0] - 2017-07-11</h2>
+
+<h3 id="added-5">Added</h3>
+
+<ul>
+<li>This changelog</li>
+
+<li><code>Sparkle</code> class documentation to the readme</li>
+
+<li>Section about how the appcast works to the readme</li>
+</ul>
+
+<h3 id="changed-6">Changed</h3>
+
+<p>Much thanks to @stephenwade for his contributions to 0.10.0</p>
+
+<ul>
+<li>Cleaned up and added documentation comments throughout the code (@stephenwade)</li>
+
+<li>Renamed lots of identifiers throughout the project to remove "NetSparkle" (i.e., <code>NetSparkleAppCast</code> to <code>AppCast</code>, <code>NetSparkleConfiguration</code> to <code>Configuration</code>, etc.) (@stephenwade)</li>
+
+<li>Renamed property <code>UseSyncronizedForms</code> to <code>ShowsUIOnMainThread</code> to better represent what it does (@stephenwade)</li>
+
+<li>Renamed events <code>CloseWPFSoftware</code> and <code>CloseWPFSoftwareAsync</code> to <code>CloseApplication</code> and <code>CloseApplicationAsync</code> (@stephenwade)
+
+
+<ul>
+<li>These events are now always run, if present (instead of only on <code>RunningFromWPF</code>)</li>
+
+<li>If one of these events is set, it will be run instead of quitting your app (to allow you a custom quit procedure), so these events should take care of quitting your app.</li></ul>
+</li>
+
+<li>Renamed <code>DSAVerificator</code> to <code>DSAChecker</code> (@stephenwade)</li>
+
+<li>Folder output changed to be more organized</li>
+
+<li>Updated LICENSE file</li>
+
+<li>Update NuGet package items</li>
+</ul>
+
+<h3 id="removed-4">Removed</h3>
+
+<ul>
+<li>deprecated property <code>EnableSilentMode</code></li>
+
+<li>property <code>RunningFromWPF</code></li>
+</ul>
+
+<h2 id="091120170606">[0.9.1.1] - 2017-06-06</h2>
+
+<h3 id="added-6">Added</h3>
+
+<ul>
+<li><code>ClearOldInstallers</code> Action that you can implement on your own to remove old installers. Use this if you download installers to a custom folder and need to erase them later.</li>
+</ul>
+
+<h3 id="changed-7">Changed</h3>
+
+<ul>
+<li>Fixed compilation issue with <code>EnableSilentMode</code> (not sure how I never came across this!)</li>
+</ul>
+
+<h2 id="09120170330">[0.9.1] - 2017-03-30</h2>
+
+<h3 id="added-7">Added</h3>
+
+<ul>
+<li><code>UpdateSize</code> to <code>NetSparkleAppCastItem</code>, analogous to the <code>length</code> field within the <code>&lt;enclosure&gt;</code> tag</li>
+
+<li><code>IsCriticalUpdate</code> to <code>NetSparkleAppCastItem</code>
+
+
+<ul>
+<li>To use, add <code>sparkle:criticalUpdate="true"</code> as an attribute to the <code>&lt;enclosure&gt;</code> tag</li>
+
+<li>When any update that the user needs is marked as critical, the skip and remind me later buttons are disabled</li>
+
+<li>When an update is marked as critical, the release notes for that version state that the update is critical</li>
+
+<li>To do something about a critical update in your own software, check <code>Sparkle.LatestAppCastItems</code> or <code>Sparkle.UpdateMarkedCritical</code> to see if an update in the list of updates that the user needs is critical</li></ul>
+</li>
+</ul>
+
+<h2 id="0920170328">[0.9] - 2017-03-28</h2>
+
+<h3 id="added-8">Added</h3>
+
+<ul>
+<li>Several more diagnostic messages for debugging on the console</li>
+
+<li>New <code>SilentMode</code> option to allow for the "normal" update process (<code>NotSilent</code>), completely silent updates (<code>DownloadAndInstall</code>), or silent downloads that you as the developer initiate the start of the update manually (<code>DownloadNoInstall</code>)
+
+
+<ul>
+<li><code>DownloadAndInstall</code> may be quite jarring to your users if you don't tell them the software is about to quit to restart. Use <code>AboutToExitForInstallerRun</code> or <code>AboutToExitForInstallerRunAsync</code> to monitor for these events.</li>
+
+<li>For proper <code>DownloadNoInstall</code> use, monitor the <code>DownloadedFileReady</code> event to know when things are ready. At some later time, call <code>_sparkle.ShowUpdateNeededUI(true);</code> to show the software update window. You may want to monitor other events as well to keep your user from performing another update check while a software update is downloading.</li></ul>
+</li>
+
+<li><code>TmpDownloadFilePath</code> to redirect the download location. This should be a folder, not a full path. Note that you still need to manually delete files that are downloaded here.</li>
+</ul>
+
+<h3 id="changed-8">Changed</h3>
+
+<ul>
+<li>Deprecated EnableSilentMode in lieu of SilentMode</li>
+
+<li>Stopped the software from redownloading the installer if it already exists on disk (saves bandwidth and time on the user's part)
+
+
+<ul>
+<li>Note that NetSparkle does not perform resumable downloads in between software instances</li></ul>
+</li>
+
+<li>Fixed potential infinite software update download loop if the software keeps downloading corrupted files (corrupt files or ones that don't pass the DSA check).</li>
+</ul>
+</body>
+</html>

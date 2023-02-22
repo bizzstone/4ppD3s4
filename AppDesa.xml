@@ -1,0 +1,17 @@
+<?xml version="1.0"?> 
+<sharpUpdate> 
+    <update appID="AppDesa"> 
+        <version>2.2.6.1</version> 
+        <url>https://raw.githubusercontent.com/bizzstone/4ppD3s4/master/2.2.6.1/AppDesa.exe</url> 
+        <fileName>AppDesa.exe</fileName> 
+        <md5>c775a3093f16418aab3a4ff307825612</md5>
+        <description>Update: 25/09/2018:
+        Penambahan Fitur
+         1. Kostum Auto Log Out.
+         2. Penambahan Menu Personil
+         3. Kostum legalitas Pada Form KTP dan Pengantar
+         4. Fix Bug Ganti Background,logo
+        </description> 
+        <launchArgs></launchArgs> 
+    </update> 
+</sharpUpdate>
